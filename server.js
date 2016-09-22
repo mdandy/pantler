@@ -9,8 +9,3 @@ app.listen(app.get("port"), function() {
 });
 
 app.use('/', express.static(path.join(__dirname, 'public')));
-
-app.get("/", function (req, res) {
-  var sample = {"foo" : "Hello World"};
-  res.send(sample);
-});
