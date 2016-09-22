@@ -1,0 +1,60 @@
+/** GLOBAL **/
+.slds-button.hidden {
+	display: none;
+}
+
+/** pantler.js **/
+.pantler.logo {
+	width: 5em;
+	margin: 1em auto;
+	display: block;
+}
+
+
+/** menu_bar.js **/
+.pantler-menu-bar {
+	clear: both;
+}
+
+.pantler-menu-bar .slds-tabs--default__nav {
+	border-bottom: 0.20em solid #0070d2;
+}
+
+.pantler-menu-bar .slds-tabs--default__item .slds-tabs--default__link {
+    color: #16325c;
+}
+
+.pantler-menu-bar .slds-tabs--default__item .slds-tabs--default__link {
+	border-top: 2px solid transparent;
+}
+
+.pantler-menu-bar .slds-tabs--default__item .slds-tabs--default__link:focus {
+	border-top-width: 0.20em;
+	border-top-color: #0070d2;
+	border-bottom-width: 0;
+
+	-webkit-box-shadow: 0 0.25em 0 0 white;
+	-moz-box-shadow: 0 0.25em 0 0 white;
+	box-shadow: 0 0.25em 0 0 white;
+
+	font-weight: bolder;
+}
+
+/** inventory_grid.js **/
+
+.pantler-inventory-grid {
+	margin-top: 2em;
+}
+
+/** docked_composer.js **/
+.pantler-docked-composer .composer-new-button {
+	position: fixed;
+	bottom: 4em;
+	right: 4em;
+}
+
+.pantler-docked-composer .composer-panel.slds-utility-panel {
+	bottom: 0;
+	right: 2em;
+	width: 480px;
+}

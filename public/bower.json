@@ -1,0 +1,27 @@
+{
+  "name": "pantler",
+  "version": "0.0.0",
+  "homepage": "",
+  "authors": [
+    "Michael Dandy"
+  ],
+  "description": "Kitchen Inventory Assistant",
+  "main": "public/index.html",
+  "moduleType": [
+    "node"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "react": "~15.3.0",
+    "salesforce-lightning-design-system": "~2.1.2",
+    "babel": "~5.8.38",
+    "jquery": "~3.1.0"
+  }
+}

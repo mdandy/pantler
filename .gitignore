@@ -1,0 +1,11 @@
+# Mac OS
+.DS_Store
+
+# Node
+node_modules
+
+# Bower
+bower_components
+
+# Sublime
+.editorconfig
