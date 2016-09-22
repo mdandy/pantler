@@ -29,6 +29,23 @@ var InventoryGrid = React.createClass({
     }];
   },
 
+  sortInventories: function(field, isAscending) {
+    var inventories = this.state.inventories;
+    inventories.sort(function(item1, item2) {
+      if (item1[field] < item2[field]) {
+        return isAscending ? -1 : 1;
+      }
+
+      if (item1[field] > item2[field]) {
+        return isAscending ? 1 : -1;
+      }
+
+      return 0;
+    });
+
+    this.setState({inventories : inventories});
+  },
+
   getInitialState: function() {
     return {
       metadata: this.getMetadata(),
@@ -37,6 +54,7 @@ var InventoryGrid = React.createClass({
   },
 
   render: function() {
+    var self = this;
     var metadata = this.state.metadata;
     var inventories = this.state.inventories;
     var arrowDownSVG = '<use xlink:href="styles/slds/assets/icons/utility-sprite/svg/symbols.svg#arrowdown"></use>'
@@ -49,7 +67,7 @@ var InventoryGrid = React.createClass({
               metadata.map(function(metadatum) {
                 return (
                   <th className="slds-is-sortable" scope="col" style={{width: "300px"}} key={metadatum.name}>
-                    <a href="javascript:void(0);" className="slds-th__action slds-text-link--reset">
+                    <a onClick={self.sortInventories.bind(self, metadatum.name)} href="javascript:void(0);" className="slds-th__action slds-text-link--reset">
                       <span className="slds-truncate" title={metadatum.label}>{metadatum.label}</span>
                       <div className="slds-icon_container">
                         <svg className="slds-icon slds-icon--x-small slds-icon-text-default slds-is-sortable__icon" dangerouslySetInnerHTML={{__html: arrowDownSVG}} />
